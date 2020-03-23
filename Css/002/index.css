@@ -1,0 +1,58 @@
+html,
+body {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: skyblue;
+}
+
+.box {
+    /* 2d效果 */
+    --width: 250px;
+    --height: calc(var(--width)/3);
+    background: linear-gradient(to right, gold, darkorange);
+    color: #fff;
+    width: var(--width);
+    height: var(--height);
+    line-height: var(--height);
+    text-align: center;
+    font-size: calc(var(--height) / 2.5);
+    font-family: sans-serif;
+    letter-spacing: .2rem;
+    border: 1px solid darkgoldenrod;
+    border-radius: 2.5rem;
+    /* 3d效果 */
+    transform: perspective(500px) rotateY(-30deg);
+    text-shadow: 6px 3px 2px rgba(0, 0, 0, .2);
+    box-shadow: 2px 0 0 5px rgba(0, 0, 0, .2);
+    /* 动画执行时间 */
+    transition: 1s;
+    /* 金属光泽 */
+    position: relative;
+    overflow: hidden;
+}
+
+.box:hover {
+    /* 3D 效果 */
+    transform: perspective(500px) rotateY(30deg);
+    text-shadow: -6px 3px 2px rgba(0, 0, 0, .2);
+    box-shadow: -2px 0 0 5px rgba(0, 0, 0, .2);
+}
+
+
+/* 金属光泽 */
+
+.box::before {
+    position: absolute;
+    content: '';
+    width: 100px;
+    height: 100%;
+    background: linear-gradient(to right, transparent, #fff, transparent);
+    left: -100%;
+    transition: 1s;
+}
+
+.box:hover::before {
+    left: 100%;
+}
