@@ -8,9 +8,6 @@ body,
     background-color: #000;
 }
 
-
-/* 统一设定动画和弯度 --左右为透明*/
-
 .circle,
 .circle::before,
 .circle::after {
@@ -22,9 +19,6 @@ body,
     animation: animate 4s ease-in-out infinite alternate;
 }
 
-
-/* 定义最外层的view的基础样式 */
-
 .circle {
     width: 10em;
     height: 10em;
@@ -33,9 +27,6 @@ body,
     font-size: 20px;
     position: relative;
 }
-
-
-/* 前后伪元素的定位问题 */
 
 .circle::before,
 .circle::after {
