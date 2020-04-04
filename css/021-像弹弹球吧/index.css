@@ -1,0 +1,63 @@
+html,
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(silver, dimgray);
+}
+
+.court {
+    width: 20em;
+    height: 20em;
+    background-color: greenyellow;
+    position: relative;
+}
+
+.left-paddle {
+    width: 2em;
+    height: 8em;
+    background-color: hotpink;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    animation: left 1s linear infinite alternate
+}
+
+.right-paddle {
+    width: 2em;
+    height: 8em;
+    background-color: hotpink;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    animation: right 1s linear infinite alternate
+}
+
+.ball {
+    width: 100%;
+    height: 1em;
+    border-left: 1em solid currentColor;
+    position: absolute;
+    left: 2em;
+    top: 50%;
+    animation: bounce 1s linear infinite alternate;
+}
+
+@keyframes left {
+    to {
+        transform: translateY(100%);
+    }
+}
+
+@keyframes right {
+    to {
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes bounce {
+    to {
+        transform: translateX(60%)
+    }
+}
