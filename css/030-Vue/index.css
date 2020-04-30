@@ -61,11 +61,31 @@ body {
 	0%, 5% {
 		top: -100%;
 	}
-	15%, 80% {
+	15%, 20% {
 		top: 0;
 		filter: opacity(1);
 		transform: scale(1);
-	}
+    }
+    30%{
+		filter: opacity(1);
+		transform: scale(10); 
+    }
+    30%{
+		filter: opacity(1);
+		transform: scale(5); 
+    }
+    50%{
+		filter: opacity(1);
+		transform: scale(4); 
+    }
+    60%{
+		filter: opacity(1);
+		transform: scale(3); 
+    }
+    70%{
+		filter: opacity(1);
+		transform: scale(2); 
+    }
 	90%, 100% {
 		top: 100%;
 		filter: opacity(0);
